@@ -3,3 +3,5 @@ Currently only checks for duplicate selectors, feel free to patch in other funct
 USAGE:
 
 ./sasslint somefile.sass
+
+NOTE: SassLint.rb will look for '../sass/lib/sass.rb', which means you should have a local copy of the sass parser checked out. Get it here: https://github.com/nex3/sass
