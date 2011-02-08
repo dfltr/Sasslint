@@ -1,0 +1,5 @@
+Currently only checks for duplicate selectors, feel free to patch in other functionality if you like it.
+
+USAGE:
+
+./sasslint somefile.sass
