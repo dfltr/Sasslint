@@ -1,0 +1,21 @@
+#!/usr/bin/ruby
+
+require 'optparse'
+require 'SassLint.rb'
+
+options = {}
+files = OptionParser.new do |opts|
+  opts.banner = "Usage: sasslint [options] file"
+
+  opts.on("-r", "--recursive", "Recurse through directories") do |r|
+    options[:recursive] = true
+  end
+
+  opts.on_tail("-h", "--help", "Show this message") do
+    puts opts
+  end
+end.parse!
+
+files.each do |f|
+  SassLint.new(f, options)
+end
